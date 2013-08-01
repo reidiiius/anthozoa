@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 require 'sinatra'
 get '/' do
  aquage = "<%= Time.now %>"
@@ -156,10 +156,10 @@ div.ftr {
  position:absolute;
  left:200px;
  top:580px; }
-h1 { 
+h1 {
  font-family:consolas,monospace;
  color:#b8860b; }
-p.attr { 
+p.attr {
  font-family:helvetica,sans-serif;
  font-size:14px;
  color:#d2691e; }
@@ -312,7 +312,7 @@ Copyright &#169; 2013 Reid Netterville III</p>
 <div class="gtr">
 <pre>
 <script>
-var o=n0 
+var o=n0
 showScale()
 </script>
 </pre>
