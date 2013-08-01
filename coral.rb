@@ -312,8 +312,7 @@ Copyright &#169; 2013 Reid Netterville III</p>
 <div class="gtr">
 <pre>
 <script>
-var o=n0
-showScale()
+var o=n0; showScale()
 </script>
 </pre>
 </div>
