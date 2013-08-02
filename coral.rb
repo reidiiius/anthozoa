@@ -532,4 +532,4 @@ var o=undefined;
 @@500
 <h1>Internal Error 500</h1>
 <div class="gtr">
-<pre>
+</div>
