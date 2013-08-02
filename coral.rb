@@ -73,6 +73,12 @@ end
 get '/pj25' do
   erb :pj25
 end
+not_found do
+  erb :'404'
+end
+error do
+  erb :'500'
+end
 __END__
 @@layout
 <!DOCTYPE html>
@@ -514,3 +520,16 @@ var o=j25; showScale()
 </script>
 </pre>
 </div>
+@@404
+<h1>Not Found 404</h1>
+<div class="gtr">
+<pre>
+<script>
+var o=undefined;
+</script>
+</pre>
+</div>
+@@500
+<h1>Internal Error 500</h1>
+<div class="gtr">
+<pre>
