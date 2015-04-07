@@ -156,7 +156,7 @@ div.gtr {
  left:25px;
  top:100px;
  font-family:consolas,monospace;
- font-size:28px;
+ font-size:24px;
  color:#ff7f50; }
 div.ftr {
  position:absolute;
@@ -267,7 +267,7 @@ j2k56x4='HgHg PuFe ____ ____ CuNp ____ ____ AuPb NpCu ____ TiSn FePu ',
 k2j56y7='NpCu ____ ____ FePu HgHg PuFe SnTi ____ CuNp PbAu ____ ____ ';
 </script>
 <script type='text/javascript'>
-function showScale() { var d=document;
+function showScale(o) { var d=document;
 d.writeln(o.slice(20,60).concat(o.slice(0,20)))
 d.writeln(o.slice(55,60).concat(o.slice(0,55)))
 d.writeln(o.slice(35,60).concat(o.slice(0,35)))
@@ -309,7 +309,7 @@ d.writeln(o.slice(20,60).concat(o.slice(0,20))) }
 </div>
 <div class="ftr">
 <p class="attr">
-Copyright &#169; 2013 Reid Netterville III</p>
+Copyright &#169; 2013-2015 Reid Netterville III</p>
 </div>
 </body>
 </html>
@@ -318,7 +318,7 @@ Copyright &#169; 2013 Reid Netterville III</p>
 <div class="gtr">
 <pre>
 <script>
-var o=n0; showScale()
+  showScale(n0)
 </script>
 </pre>
 </div>
@@ -327,7 +327,7 @@ var o=n0; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k6; showScale()
+  showScale(k6)
 </script>
 </pre>
 </div>
@@ -336,7 +336,7 @@ var o=k6; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j5; showScale()
+  showScale(j5)
 </script>
 </pre>
 </div>
@@ -345,7 +345,7 @@ var o=j5; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j3; showScale()
+  showScale(j3)
 </script>
 </pre>
 </div>
@@ -354,7 +354,7 @@ var o=j3; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k1; showScale()
+  showScale(k1)
 </script>
 </pre>
 </div>
@@ -363,7 +363,7 @@ var o=k1; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j6; showScale()
+  showScale(j6)
 </script>
 </pre>
 </div>
@@ -372,7 +372,7 @@ var o=j6; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k5; showScale()
+  showScale(k5)
 </script>
 </pre>
 </div>
@@ -381,7 +381,7 @@ var o=k5; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k56; showScale()
+  showScale(k56)
 </script>
 </pre>
 </div>
@@ -390,7 +390,7 @@ var o=k56; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j56; showScale()
+  showScale(j56)
 </script>
 </pre>
 </div>
@@ -399,7 +399,7 @@ var o=j56; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j2; showScale()
+  showScale(j2)
 </script>
 </pre>
 </div>
@@ -408,7 +408,7 @@ var o=j2; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k2; showScale()
+  showScale(k2)
 </script>
 </pre>
 </div>
@@ -417,7 +417,7 @@ var o=k2; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j26; showScale()
+  showScale(j26)
 </script>
 </pre>
 </div>
@@ -426,7 +426,7 @@ var o=j26; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k25; showScale()
+  showScale(k25)
 </script>
 </pre>
 </div>
@@ -435,7 +435,7 @@ var o=k25; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j23; showScale()
+  showScale(j23)
 </script>
 </pre>
 </div>
@@ -444,7 +444,7 @@ var o=j23; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k12; showScale()
+  showScale(k12)
 </script>
 </pre>
 </div>
@@ -453,7 +453,7 @@ var o=k12; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k1j6; showScale()
+  showScale(k1j6)
 </script>
 </pre>
 </div>
@@ -462,7 +462,7 @@ var o=k1j6; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j3k5; showScale()
+  showScale(j3k5)
 </script>
 </pre>
 </div>
@@ -471,7 +471,7 @@ var o=j3k5; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j3k6; showScale()
+  showScale(j3k6)
 </script>
 </pre>
 </div>
@@ -480,7 +480,7 @@ var o=j3k6; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k1j5; showScale()
+  showScale(k1j5)
 </script>
 </pre>
 </div>
@@ -489,7 +489,7 @@ var o=k1j5; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k2j6; showScale()
+  showScale(k2j6)
 </script>
 </pre>
 </div>
@@ -498,7 +498,7 @@ var o=k2j6; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j2k5; showScale()
+  showScale(j2k5)
 </script>
 </pre>
 </div>
@@ -507,7 +507,7 @@ var o=j2k5; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=k26; showScale()
+  showScale(k26)
 </script>
 </pre>
 </div>
@@ -516,7 +516,7 @@ var o=k26; showScale()
 <div class="gtr">
 <pre>
 <script>
-var o=j25; showScale()
+  showScale(j25)
 </script>
 </pre>
 </div>
