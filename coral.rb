@@ -1,7 +1,9 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby
+
 require 'sinatra'
+
 get '/' do
- aquage = "<%= Time.now %>"
+ aquage = '<%= Time.now %>'
   erb aquage
 end
 get '/pn0' do
@@ -84,8 +86,8 @@ __END__
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-<meta charset='utf-8'/>
- <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCA
+<meta charset='UTF-8'>
+ <link rel='icon' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCA
 IAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgO
 gAAHUwAADqYAAAOpgAABdwnLpRPAAAAEF0RVh0Q29tbWVudABDUkVBVE9SOiBnZC1qcGVnIHYxLjAgKH
 VzaW5nIElKRyBKUEVHIHY2MiksIHF1YWxpdHkgPSA5MAqwRViTAAAKzklEQVRISyVWaXMb15WFLDt2kk
@@ -135,394 +137,407 @@ tArMM0EJLOAJaZUt1ARnDNjWkOEKSiuiuhLMUVNKUlooNc6qiW7pejvXS4FwmIPlhzhTTLqrgYkMwhyR
 YWbZHRWSqMyBbQyllM0iATuCk4C9HPgOtOoEugG3hixb52giWnJg5y7IY1CFH95ChE9oL8EMUGPlh3ws
 eAWBuu2oCogbwF4lBQtYdUM8CqZg7oFlgHec72fwVUF6K7wsZZAUAUUI7A8SL8tdmnP8emNvzEvXrsDI
 JhAyl66KCHbkS0wCcLgZNniDILaGRkH3oEhVQnSHPg6BV9YVm3+g1LYGwOTcz/C0K4t3N519JFAAAAAE
-lFTkSuQmCC">
+lFTkSuQmCC'>
 <title>Coral</title>
-<meta name='author' content='Reid Netterville III'/>
+<meta name='author' content='Reid Netterville III'>
 <style type='text/css'>
 body {
- background-color:#191970; }
+  background-color:#191970;
+}
 nav.ui {
- position:relative;
- left:0;
- top:10px; }
+  position:relative;
+  left:0;
+  top:0;
+}
 div.content {
- position:absolute;
- left:120px;
- top:60px;
- font-family:consolas,monospace;
- color:#ff7f50; }
+  position:absolute;
+  left:120px;
+  top:60px;
+  font-family:consolas,monospace;
+  color:#ff7f50;
+}
 div.gtr {
- position:absolute;
- left:25px;
- top:100px;
- font-family:consolas,monospace;
- font-size:24px;
- color:#ff7f50; }
+  position:absolute;
+  left:25px;
+  top:100px;
+  font-family:consolas,monospace;
+  font-size:24px;
+  color:#ff7f50;
+}
 div.ftr {
- position:absolute;
- left:200px;
- top:580px; }
+  position:absolute;
+  left:200px;
+  top:580px;
+}
 h1 {
- font-family:consolas,monospace;
- color:#b8860b; }
-p.attr {
- font-family:helvetica,sans-serif;
- font-size:14px;
- color:#d2691e; }
+  font-family:consolas,monospace;
+  color:#b8860b;
+}
+p.cpy {
+  font-family:helvetica,sans-serif;
+  font-size:14px;
+  color:#d2691e;
+}
 ul {
- list-style-type:circle;
- font-family:consolas,monospace;
- font-size:20px;
- color:#cd853f; }
+  list-style-type:circle;
+  font-family:consolas,monospace;
+  font-size:20px;
+  color:#cd853f;
+}
 li {
- padding:1px; }
-a:link {
- text-decoration:none;
- color:#20b2aa; }
+  padding:1px;
+}
+a {
+  text-decoration:none;
+  color:#20b2aa;
+}
 a:hover {
- text-decoration:underline;
- color:#00ced1; }
-a:visited {
- color:#008b8b; }
+  text-decoration:underline;
+  color:#00ced1;
+}
 </style>
 <script type='text/javascript'>
- var j2='HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ____ AgUr ____ FePu ',
-     j3='HgSn ____ SnHg UrFe ____ PbAg ____ AuAu ____ AgPb ____ FeUr ',
-     j5='PbCu ____ AuSn ____ AgHg TiFe FeTi ____ ____ SnAu ____ CuPb ',
-     j6='HgAu ____ SnPb ____ CuUr PbSn ____ AuHg NpFe ____ ____ FeNp ',
-     k1='____ FeUr HgSn ____ SnHg UrFe ____ PbAg ____ AuAu ____ AgPb ',
-     k2='NpCu ____ ____ FePu HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ',
-     k5='UrCu ____ PbSn ____ AuHg NpFe ____ ____ FeNp HgAu ____ SnPb ',
-     k6='HgAg ____ SnAu ____ CuPb PbCu ____ AuSn ____ ____ TiFe FeTi ',
-     n0='HgCu ____ SnSn ____ CuHg PbFe ____ AuAg ____ AgAu ____ FePb ',
-    j17='____ ____ SnAu ____ CuPb PbCu ____ AuSn ____ AgHg TiFe FeTi ',
-    j23='HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ____ AgUr ____ FePu ',
-    j25='FeCu HgMn ____ ____ MnHg CuFe PbTi ____ ____ NpAu ____ TiPb ',
-    j26='HgHg PuFe ____ ____ CuNp PbAu ____ AuPb NpCu ____ ____ FePu ',
-    j36='HgAu ____ SnPb UrCu ____ PbSn ____ AuHg NpFe ____ ____ FeNp ',
-    j56='UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp ____ ____ SnPb ',
-    k12='____ AgUr ____ FePu HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ',
-    k15='____ CuUr PbSn ____ AuHg NpFe ____ ____ FeNp HgAu ____ SnPb ',
-    k25='NpCu ____ ____ FePu HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ',
-    k26='HgMn ____ ____ MnHg CuFe PbTi ____ AuNp ____ ____ TiPb FeCu ',
-    k34='PbCu ____ AuSn ____ ____ TiFe FeTi HgAg ____ SnAu ____ CuPb ',
-    k56='HgAu ____ SnPb ____ CuUr PbSn ____ ____ NpFe ____ TiAg FeNp ',
-   j236='HgHg PuFe ____ UrAg ____ PbAu ____ AuPb NpCu ____ ____ FePu ',
-   j256='FeCu HgMn ____ ____ MnHg CuFe PbTi ____ AuNp ____ ____ TiPb ',
-   j2k5='FeCu HgMn ____ ____ MnHg CuFe ____ ____ AuNp NpAu ____ TiPb ',
-   j2k6='HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ____ ____ TiSn FePu ',
-   j2y3='HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ____ AgUr ____ FePu ',
-   j3k5='NpCu ____ TiSn FePu ____ PuFe ____ ____ CuNp PbAu ____ AuPb ',
-   j3k6='HgTi ____ SnNp UrAu ____ PbPb ____ AuUr ____ ____ TiHg FeFe ',
-   j5y6='PbCu ____ AuSn ____ AgHg TiFe FeTi HgAg ____ ____ ____ CuPb ',
-   k125='____ AgUr ____ FePu HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ',
-   k1j5='____ AuUr NpSn ____ TiHg FeFe HgTi ____ ____ UrAu ____ PbPb ',
-   k1j6='____ PuFe SnTi ____ CuNp PbAu ____ AuPb NpCu ____ ____ FePu ',
-   k256='HgMn ____ ____ MnHg CuFe PbTi ____ ____ NpAu ____ TiPb FeCu ',
-   k2j5='NpCu ____ ____ FePu HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ',
-   k2j6='HgMn ____ ____ MnHg CuFe PbTi ____ AuNp NpAu ____ ____ FeCu ',
-   k2x1='____ ____ TiSn FePu HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ',
-   k6x5='HgAg ____ SnAu ____ CuPb PbCu ____ ____ ____ AgHg TiFe FeTi ',
-   n167='NpCu ____ ____ FePu ____ PuFe SnTi ____ CuNp PbAu ____ AuPb ',
-   n345='____ PuFe ____ ____ CuNp PbAu ____ AuPb NpCu ____ TiSn FePu ',
-   n5y2='HgMn ____ ____ MnHg CuFe ____ ____ AuNp NpAu ____ TiPb FeCu ',
-   n6x2='FeCu HgMn ____ ____ MnHg CuFe PbTi ____ AuNp NpAu ____ ____ ',
-  j17k2='____ ____ ____ MnFe CuTi PbAg ____ AuAu ____ AgPb TiCu FeMn ',
-  j17y2='HgAg ____ ____ ____ CuPb PbCu ____ AuSn ____ AgHg TiFe FeTi ',
-  j23k6='HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ____ ____ TiSn FePu ',
-  j25y6='TiCu FeMn ____ ____ SnHg MnFe CuTi PbAg ____ ____ ____ AgPb ',
-  j26y3='HgHg PuFe SnTi ____ ____ PbAu ____ AuPb NpCu ____ ____ FePu ',
-  j2k34='TiCu FeMn ____ ____ ____ MnFe CuTi PbAg ____ AuAu ____ AgPb ',
-  j2k56='HgHg PuFe ____ ____ CuNp PbAu ____ ____ NpCu ____ TiSn FePu ',
-  j56y7='UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp HgAu ____ ____ ',
-  k12j5='____ AgUr ____ FePu HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ',
-  k25x1='____ ____ TiSn FePu HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ',
-  k26x5='HgSn ____ ____ MnFe CuTi PbAg ____ ____ ____ AgPb TiCu FeMn ',
-  k2j56='NpCu ____ ____ FePu HgHg PuFe SnTi ____ CuNp ____ ____ AuPb ',
-  k34x2='PbCu ____ ____ ____ AgHg TiFe FeTi HgAg ____ SnAu ____ CuPb ',
-  k56x4='HgAu ____ SnPb ____ CuUr ____ ____ AuHg NpFe ____ TiAg FeNp ',
-  n25x6='TiCu FeMn HgSn ____ ____ MnFe CuTi PbAg ____ ____ ____ AgPb ',
-  n26y5='____ ____ SnHg MnFe CuTi PbAg ____ ____ ____ AgPb TiCu FeMn ',
-  n45y2='HgTi ____ ____ UrAu ____ PbPb ____ AuUr NpSn ____ TiHg FeFe ',
-  n67x2='____ AuUr ____ ____ TiHg FeFe HgTi ____ SnNp UrAu ____ PbPb ',
- j136y7='____ ____ SnPb UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp ',
- j167y2='HgAu ____ ____ ____ CuUr PbSn ____ AuHg NpFe ____ TiAg FeNp ',
- j246y3='HgHg PuFe SnTi ____ CuNp ____ ____ AuPb NpCu ____ ____ FePu ',
- j26y34='HgHg PuFe SnTi UrAg ____ ____ ____ AuPb NpCu ____ ____ FePu ',
- j2k6x5='HgHg PuFe ____ ____ CuNp PbAu ____ ____ ____ AgUr TiSn FePu ',
- j2k6y3='HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ____ ____ TiSn FePu ',
- j346y5='NpCu ____ TiSn FePu HgHg PuFe ____ ____ CuNp ____ ____ AuPb ',
- j3k5x4='HgAu ____ SnPb UrCu ____ ____ ____ AuHg NpFe AgTi ____ FeNp ',
- k135x4='____ CuUr PbSn ____ ____ NpFe ____ TiAg FeNp HgAu ____ SnPb ',
- k157x6='HgHg PuFe SnTi ____ CuNp PbAu ____ ____ NpCu ____ ____ FePu ',
- k1j6y7='____ CuUr PbSn ____ AuHg NpFe ____ TiAg FeNp HgAu ____ ____ ',
- k257x1='NpCu ____ TiSn FePu HgHg PuFe ____ ____ CuNp PbAu ____ ____ ',
- k25x17='____ AgUr TiSn FePu HgHg PuFe ____ ____ CuNp PbAu ____ ____ ',
- k2j5x1='____ ____ TiSn FePu HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ',
- k2j5y6='NpCu ____ ____ FePu HgHg PuFe SnTi UrAg ____ ____ ____ AuPb ',
- k345x2='UrCu ____ ____ ____ AuHg NpFe AgTi ____ FeNp HgAu ____ SnPb ',
- n167x4='HgAu ____ ____ UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp ',
- n345y7='____ CuUr ____ ____ AuHg NpFe ____ TiAg FeNp HgAu ____ SnPb ',
-j2k56x4='HgHg PuFe ____ ____ CuNp ____ ____ AuPb NpCu ____ TiSn FePu ',
-k2j56y7='NpCu ____ ____ FePu HgHg PuFe SnTi ____ CuNp PbAu ____ ____ ';
-</script>
-<script type='text/javascript'>
-function showScale(o) { var d=document;
-d.writeln(o.slice(20,60).concat(o.slice(0,20)))
-d.writeln(o.slice(55,60).concat(o.slice(0,55)))
-d.writeln(o.slice(35,60).concat(o.slice(0,35)))
-d.writeln(o.slice(10,60).concat(o.slice(0,10)))
-d.writeln(o.slice(45,60).concat(o.slice(0,45)))
-d.writeln(o.slice(20,60).concat(o.slice(0,20))) }
+  var anthozoa = {
+      j2:'HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ____ AgUr ____ FePu ',
+      j3:'HgSn ____ SnHg UrFe ____ PbAg ____ AuAu ____ AgPb ____ FeUr ',
+      j5:'PbCu ____ AuSn ____ AgHg TiFe FeTi ____ ____ SnAu ____ CuPb ',
+      j6:'HgAu ____ SnPb ____ CuUr PbSn ____ AuHg NpFe ____ ____ FeNp ',
+      k1:'____ FeUr HgSn ____ SnHg UrFe ____ PbAg ____ AuAu ____ AgPb ',
+      k2:'NpCu ____ ____ FePu HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ',
+      k5:'UrCu ____ PbSn ____ AuHg NpFe ____ ____ FeNp HgAu ____ SnPb ',
+      k6:'HgAg ____ SnAu ____ CuPb PbCu ____ AuSn ____ ____ TiFe FeTi ',
+      n0:'HgCu ____ SnSn ____ CuHg PbFe ____ AuAg ____ AgAu ____ FePb ',
+     j17:'____ ____ SnAu ____ CuPb PbCu ____ AuSn ____ AgHg TiFe FeTi ',
+     j23:'HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ____ AgUr ____ FePu ',
+     j25:'FeCu HgMn ____ ____ MnHg CuFe PbTi ____ ____ NpAu ____ TiPb ',
+     j26:'HgHg PuFe ____ ____ CuNp PbAu ____ AuPb NpCu ____ ____ FePu ',
+     j36:'HgAu ____ SnPb UrCu ____ PbSn ____ AuHg NpFe ____ ____ FeNp ',
+     j56:'UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp ____ ____ SnPb ',
+     k12:'____ AgUr ____ FePu HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ',
+     k15:'____ CuUr PbSn ____ AuHg NpFe ____ ____ FeNp HgAu ____ SnPb ',
+     k25:'NpCu ____ ____ FePu HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ',
+     k26:'HgMn ____ ____ MnHg CuFe PbTi ____ AuNp ____ ____ TiPb FeCu ',
+     k34:'PbCu ____ AuSn ____ ____ TiFe FeTi HgAg ____ SnAu ____ CuPb ',
+     k56:'HgAu ____ SnPb ____ CuUr PbSn ____ ____ NpFe ____ TiAg FeNp ',
+    j236:'HgHg PuFe ____ UrAg ____ PbAu ____ AuPb NpCu ____ ____ FePu ',
+    j256:'FeCu HgMn ____ ____ MnHg CuFe PbTi ____ AuNp ____ ____ TiPb ',
+    j2k5:'FeCu HgMn ____ ____ MnHg CuFe ____ ____ AuNp NpAu ____ TiPb ',
+    j2k6:'HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ____ ____ TiSn FePu ',
+    j2y3:'HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ____ AgUr ____ FePu ',
+    j3k5:'NpCu ____ TiSn FePu ____ PuFe ____ ____ CuNp PbAu ____ AuPb ',
+    j3k6:'HgTi ____ SnNp UrAu ____ PbPb ____ AuUr ____ ____ TiHg FeFe ',
+    j5y6:'PbCu ____ AuSn ____ AgHg TiFe FeTi HgAg ____ ____ ____ CuPb ',
+    k125:'____ AgUr ____ FePu HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ',
+    k1j5:'____ AuUr NpSn ____ TiHg FeFe HgTi ____ ____ UrAu ____ PbPb ',
+    k1j6:'____ PuFe SnTi ____ CuNp PbAu ____ AuPb NpCu ____ ____ FePu ',
+    k256:'HgMn ____ ____ MnHg CuFe PbTi ____ ____ NpAu ____ TiPb FeCu ',
+    k2j5:'NpCu ____ ____ FePu HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ',
+    k2j6:'HgMn ____ ____ MnHg CuFe PbTi ____ AuNp NpAu ____ ____ FeCu ',
+    k2x1:'____ ____ TiSn FePu HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ',
+    k6x5:'HgAg ____ SnAu ____ CuPb PbCu ____ ____ ____ AgHg TiFe FeTi ',
+    n167:'NpCu ____ ____ FePu ____ PuFe SnTi ____ CuNp PbAu ____ AuPb ',
+    n345:'____ PuFe ____ ____ CuNp PbAu ____ AuPb NpCu ____ TiSn FePu ',
+    n5y2:'HgMn ____ ____ MnHg CuFe ____ ____ AuNp NpAu ____ TiPb FeCu ',
+    n6x2:'FeCu HgMn ____ ____ MnHg CuFe PbTi ____ AuNp NpAu ____ ____ ',
+   j17k2:'____ ____ ____ MnFe CuTi PbAg ____ AuAu ____ AgPb TiCu FeMn ',
+   j17y2:'HgAg ____ ____ ____ CuPb PbCu ____ AuSn ____ AgHg TiFe FeTi ',
+   j23k6:'HgHg PuFe ____ UrAg ____ PbAu ____ AuPb ____ ____ TiSn FePu ',
+   j25y6:'TiCu FeMn ____ ____ SnHg MnFe CuTi PbAg ____ ____ ____ AgPb ',
+   j26y3:'HgHg PuFe SnTi ____ ____ PbAu ____ AuPb NpCu ____ ____ FePu ',
+   j2k34:'TiCu FeMn ____ ____ ____ MnFe CuTi PbAg ____ AuAu ____ AgPb ',
+   j2k56:'HgHg PuFe ____ ____ CuNp PbAu ____ ____ NpCu ____ TiSn FePu ',
+   j34k6:'HgSn ____ SnHg MnFe CuTi ____ ____ AuAu ____ ____ TiCu FeMn ',
+   j56y7:'UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp HgAu ____ ____ ',
+   k12j5:'____ AgUr ____ FePu HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ',
+   k17j5:'TiCu FeMn HgSn ____ SnHg MnFe CuTi ____ ____ AuAu ____ ____ ',
+   k25x1:'____ ____ TiSn FePu HgHg PuFe ____ ____ CuNp PbAu ____ AuPb ',
+   k26x5:'HgSn ____ ____ MnFe CuTi PbAg ____ ____ ____ AgPb TiCu FeMn ',
+   k2j56:'NpCu ____ ____ FePu HgHg PuFe SnTi ____ CuNp ____ ____ AuPb ',
+   k34x2:'PbCu ____ ____ ____ AgHg TiFe FeTi HgAg ____ SnAu ____ CuPb ',
+   k56x4:'HgAu ____ SnPb ____ CuUr ____ ____ AuHg NpFe ____ TiAg FeNp ',
+   n25x6:'TiCu FeMn HgSn ____ ____ MnFe CuTi PbAg ____ ____ ____ AgPb ',
+   n26y5:'____ ____ SnHg MnFe CuTi PbAg ____ ____ ____ AgPb TiCu FeMn ',
+   n45y2:'HgTi ____ ____ UrAu ____ PbPb ____ AuUr NpSn ____ TiHg FeFe ',
+   n67x2:'____ AuUr ____ ____ TiHg FeFe HgTi ____ SnNp UrAu ____ PbPb ',
+  j136y7:'____ ____ SnPb UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp ',
+  j167y2:'HgAu ____ ____ ____ CuUr PbSn ____ AuHg NpFe ____ TiAg FeNp ',
+  j246y3:'HgHg PuFe SnTi ____ CuNp ____ ____ AuPb NpCu ____ ____ FePu ',
+  j26y34:'HgHg PuFe SnTi UrAg ____ ____ ____ AuPb NpCu ____ ____ FePu ',
+  j2k6x5:'HgHg PuFe ____ ____ CuNp PbAu ____ ____ ____ AgUr TiSn FePu ',
+  j2k6y3:'HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ____ ____ TiSn FePu ',
+  j346y5:'NpCu ____ TiSn FePu HgHg PuFe ____ ____ CuNp ____ ____ AuPb ',
+  j3k5x4:'HgAu ____ SnPb UrCu ____ ____ ____ AuHg NpFe AgTi ____ FeNp ',
+  k135x4:'____ CuUr PbSn ____ ____ NpFe ____ TiAg FeNp HgAu ____ SnPb ',
+  k157x6:'HgHg PuFe SnTi ____ CuNp PbAu ____ ____ NpCu ____ ____ FePu ',
+  k1j6y7:'____ CuUr PbSn ____ AuHg NpFe ____ TiAg FeNp HgAu ____ ____ ',
+  k257x1:'NpCu ____ TiSn FePu HgHg PuFe ____ ____ CuNp PbAu ____ ____ ',
+  k25x17:'____ AgUr TiSn FePu HgHg PuFe ____ ____ CuNp PbAu ____ ____ ',
+  k2j5x1:'____ ____ TiSn FePu HgHg PuFe SnTi ____ ____ PbAu ____ AuPb ',
+  k2j5y6:'NpCu ____ ____ FePu HgHg PuFe SnTi UrAg ____ ____ ____ AuPb ',
+  k345x2:'UrCu ____ ____ ____ AuHg NpFe AgTi ____ FeNp HgAu ____ SnPb ',
+  n167x4:'HgAu ____ ____ UrCu ____ PbSn ____ AuHg NpFe AgTi ____ FeNp ',
+  n345y7:'____ CuUr ____ ____ AuHg NpFe ____ TiAg FeNp HgAu ____ SnPb ',
+ j2k56x4:'HgHg PuFe ____ ____ CuNp ____ ____ AuPb NpCu ____ TiSn FePu ',
+ j3k56x4:'HgTi ____ SnNp UrAu ____ ____ ____ AuUr NpSn ____ TiHg FeFe ',
+ k1j56y7:'____ AuUr NpSn ____ TiHg FeFe HgTi ____ SnNp UrAu ____ ____ ',
+ k2j56y7:'NpCu ____ ____ FePu HgHg PuFe SnTi ____ CuNp PbAu ____ ____ '}
+
+function showScale(o) {  var d = document;
+  d.writeln(o.slice(20,60).concat(o.slice( 0,20)))
+  d.writeln(o.slice(55,60).concat(o.slice( 0,55)))
+  d.writeln(o.slice(35,60).concat(o.slice( 0,35)))
+  d.writeln(o.slice(10,60).concat(o.slice( 0,10)))
+  d.writeln(o.slice(45,60).concat(o.slice( 0,45)))
+  d.writeln(o.slice(20,60).concat(o.slice( 0,20)))
+}
 </script>
 </head>
 <body>
-<nav class="ui">
+<nav class='ui'>
 <ul>
- <li><a href="/pn0">n0</a></li>
- <li><a href="/pk6">k6</a></li>
- <li><a href="/pj5">j5</a></li>
- <li><a href="/pj3">j3</a></li>
- <li><a href="/pk1">k1</a></li>
- <li><a href="/pj6">j6</a></li>
- <li><a href="/pk5">k5</a></li>
- <li><a href="/pk56">k56</a></li>
- <li><a href="/pj56">j56</a></li>
- <li><a href="/pj2">j2</a></li>
- <li><a href="/pk2">k2</a></li>
- <li><a href="/pj26">j26</a></li>
- <li><a href="/pk25">k25</a></li>
- <li><a href="/pj23">j23</a></li>
- <li><a href="/pk12">k12</a></li>
- <li><a href="/pk1j6">k1j6</a></li>
- <li><a href="/pj3k5">j3k5</a></li>
- <li><a href="/pj3k6">j3k6</a></li>
- <li><a href="/pk1j5">k1j5</a></li>
- <li><a href="/pk2j6">k2j6</a></li>
- <li><a href="/pj2k5">j2k5</a></li>
- <li><a href="/pk26">k26</a></li>
- <li><a href="/pj25">j25</a></li>
+  <li><a href='/pn0'>n0</a></li>
+  <li><a href='/pk6'>k6</a></li>
+  <li><a href='/pj5'>j5</a></li>
+  <li><a href='/pj3'>j3</a></li>
+  <li><a href='/pk1'>k1</a></li>
+  <li><a href='/pj6'>j6</a></li>
+  <li><a href='/pk5'>k5</a></li>
+  <li><a href='/pk56'>k56</a></li>
+  <li><a href='/pj56'>j56</a></li>
+  <li><a href='/pj2'>j2</a></li>
+  <li><a href='/pk2'>k2</a></li>
+  <li><a href='/pj26'>j26</a></li>
+  <li><a href='/pk25'>k25</a></li>
+  <li><a href='/pj23'>j23</a></li>
+  <li><a href='/pk12'>k12</a></li>
+  <li><a href='/pk1j6'>k1j6</a></li>
+  <li><a href='/pj3k5'>j3k5</a></li>
+  <li><a href='/pj3k6'>j3k6</a></li>
+  <li><a href='/pk1j5'>k1j5</a></li>
+  <li><a href='/pk2j6'>k2j6</a></li>
+  <li><a href='/pj2k5'>j2k5</a></li>
+  <li><a href='/pk26'>k26</a></li>
+  <li><a href='/pj25'>j25</a></li>
 </ul>
 </nav>
-<div class="content">
+<div class='content'>
 <%= yield %>
 </div>
-<div class="ftr">
-<p class="attr">
-Copyright &#169; 2013-2015 Reid Netterville III</p>
+<div class='ftr'>
+  <p class='cpy'>Copyright © 2013-2015 Reid Netterville III</p>
 </div>
 </body>
 </html>
 @@pn0
 <h1>n0</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(n0)
+  showScale(anthozoa.n0)
 </script>
 </pre>
 </div>
 @@pk6
 <h1>k6</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k6)
+  showScale(anthozoa.k6)
 </script>
 </pre>
 </div>
 @@pj5
 <h1>j5</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j5)
+  showScale(anthozoa.j5)
 </script>
 </pre>
 </div>
 @@pj3
 <h1>j3</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j3)
+  showScale(anthozoa.j3)
 </script>
 </pre>
 </div>
 @@pk1
 <h1>k1</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k1)
+  showScale(anthozoa.k1)
 </script>
 </pre>
 </div>
 @@pj6
 <h1>j6</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j6)
+  showScale(anthozoa.j6)
 </script>
 </pre>
 </div>
 @@pk5
 <h1>k5</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k5)
+  showScale(anthozoa.k5)
 </script>
 </pre>
 </div>
 @@pk56
 <h1>k56</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k56)
+  showScale(anthozoa.k56)
 </script>
 </pre>
 </div>
 @@pj56
 <h1>j56</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j56)
+  showScale(anthozoa.j56)
 </script>
 </pre>
 </div>
 @@pj2
 <h1>j2</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j2)
+  showScale(anthozoa.j2)
 </script>
 </pre>
 </div>
 @@pk2
 <h1>k2</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k2)
+  showScale(anthozoa.k2)
 </script>
 </pre>
 </div>
 @@pj26
 <h1>j26</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j26)
+  showScale(anthozoa.j26)
 </script>
 </pre>
 </div>
 @@pk25
 <h1>k25</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k25)
+  showScale(anthozoa.k25)
 </script>
 </pre>
 </div>
 @@pj23
 <h1>j23</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j23)
+  showScale(anthozoa.j23)
 </script>
 </pre>
 </div>
 @@pk12
 <h1>k12</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k12)
+  showScale(anthozoa.k12)
 </script>
 </pre>
 </div>
 @@pk1j6
 <h1>k1j6</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k1j6)
+  showScale(anthozoa.k1j6)
 </script>
 </pre>
 </div>
 @@pj3k5
 <h1>j3k5</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j3k5)
+  showScale(anthozoa.j3k5)
 </script>
 </pre>
 </div>
 @@pj3k6
 <h1>j3k6</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j3k6)
+  showScale(anthozoa.j3k6)
 </script>
 </pre>
 </div>
 @@pk1j5
 <h1>k1j5</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k1j5)
+  showScale(anthozoa.k1j5)
 </script>
 </pre>
 </div>
 @@pk2j6
 <h1>k2j6</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k2j6)
+  showScale(anthozoa.k2j6)
 </script>
 </pre>
 </div>
 @@pj2k5
 <h1>j2k5</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j2k5)
+  showScale(anthozoa.j2k5)
 </script>
 </pre>
 </div>
 @@pk26
 <h1>k26</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(k26)
+  showScale(anthozoa.k26)
 </script>
 </pre>
 </div>
 @@pj25
 <h1>j25</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
-  showScale(j25)
+  showScale(anthozoa.j25)
 </script>
 </pre>
 </div>
 @@404
 <h1>Not Found 404</h1>
-<div class="gtr">
+<div class='gtr'>
 <pre>
 <script>
 var o=undefined;
@@ -531,5 +546,6 @@ var o=undefined;
 </div>
 @@500
 <h1>Internal Error 500</h1>
-<div class="gtr">
+<div class='gtr'>
 </div>
+
