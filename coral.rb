@@ -324,7 +324,7 @@ function showScale(o) {  var d = document;
 <%= yield %>
 </div>
 <div class='ftr'>
-  <p class='cpy'>Copyright © 2013-2015 Reid Netterville III</p>
+  <p class='cpy'>Copyright © 2013-2016 Reid Netterville III</p>
 </div>
 </body>
 </html>
