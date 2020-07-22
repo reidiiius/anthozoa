@@ -1,9 +1,23 @@
-anthozoa
-========
+# Anthozoa
+Coral reef
 
-#### v160218.0
+---
 
- - [coral](https://anthozoa.herokuapp.com/)
+### Download
 
-> Copyright &#169; 2013-2016 Reid Netterville III
+    git clone https://github.com/reidiiius/anthozoa.git
+
+---
+
+### Usage
+command-line
+
+    cd anthozoa/
+
+    ruby coral.rb
+
+---
+
+### Distribution
+MIT License
 
